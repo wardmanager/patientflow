@@ -15,6 +15,14 @@
     <%= f.label :packet %><br>
     <%= f.text_field :packet %>
   </div>
+  <% fields = ['deviceUUID', 'uuid', 'identifier', 'major', 'minor', 'type', 'proximity'] %>
+  <% for field in fields %>
+    <div class="field">
+      <%= f.label field %><br>
+      <%= f.text_field field %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>

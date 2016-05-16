@@ -1,9 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<% fields = ['packet', 'deviceUUID', 'uuid', 'identifier', 'major', 'minor', 'type', 'proximity'] %>
+<% for field in fields %>
+    <p>
+      <strong><%=field%></strong>
+      <%= @ad[field]%>
+    </p>
+<% end %>
 <p>
-  <strong>Packet:</strong>
-  <%= @ad.packet %>
+  <strong>created</strong>
+  <%= @ad[:created_at].strftime("%Y/%m/%d %H:%M") %>
 </p>
+
 
 <%= link_to 'Edit', edit_ad_path(@ad) %> |
 <%= link_to 'Back', ads_path %>
