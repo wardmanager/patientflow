@@ -15,7 +15,7 @@
     <%= f.label :packet %><br>
     <%= f.text_field :packet %>
   </div>
-  <% fields = ['deviceUUID', 'uuid', 'identifier', 'major', 'minor', 'type', 'proximity'] %>
+  <% fields = ['deviceUUID', 'uuid', 'identifier', 'major', 'minor', 'type', 'proximity', 'latitude', 'longitude', 'acquired'] %>
   <% for field in fields %>
     <div class="field">
       <%= f.label field %><br>
