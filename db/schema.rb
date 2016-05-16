@@ -11,12 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160512012421) do
+ActiveRecord::Schema.define(version: 20160516140935) do
 
   create_table "ads", force: true do |t|
     t.string   "packet"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "deviceUUID"
+    t.string   "label"
+    t.string   "uuid"
+    t.string   "identifier"
+    t.integer  "major"
+    t.integer  "minor"
+    t.string   "type"
+    t.string   "proximity"
   end
 
 end
