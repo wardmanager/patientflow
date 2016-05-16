@@ -1,5 +1,16 @@
 <h1>Listing ads</h1>
 
+<style>
+    table { border-collapse: collapse; }
+    tr { border: none; }
+    td, th {
+        border-right: solid 1px #f00;
+        border-left: solid 1px #f00;
+    }
+    th { background-color:rgb(240,240,240);}
+    a, a.visited { color:blue; text-decoration:none;}
+</style>
+
 <table border="1">
   <thead>
     <tr>
@@ -20,11 +31,11 @@
         <td><%= ad.deviceUUID %></td>
         <td><%= ad.uuid%></td>
         <td><%= ad.label%></td>
-        <td><%= (ad.latitude) ? ad.latitude[0..4] : '' %> - <%=  (ad.longitude) ? ad.longitude[0..4] : ''%></td>
+        <td><%= (ad.latitude) ? ad.latitude.to_s[0..4] : '' %>, <%=  (ad.longitude) ? ad.longitude.to_s[0..4] : ''%></td>
         <td><%= ad.created_at.strftime("%Y/%m/%d %H:%M")%></td>
-        <td><%= link_to 'Show', ad %></td>
-        <td><%= link_to 'Edit', edit_ad_path(ad) %></td>
-        <td><%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="3"><%= link_to 'Show', ad %>
+          <%= link_to 'Edit', edit_ad_path(ad) %>
+          <%= link_to 'Destroy', ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
