@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516143854) do
+ActiveRecord::Schema.define(version: 20160523155438) do
 
   create_table "ads", force: true do |t|
     t.string   "packet"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160516143854) do
     t.float    "latitude",   limit: 24
     t.float    "longitude",  limit: 24
     t.integer  "acquired"
+    t.float    "power",      limit: 24
   end
 
 end
