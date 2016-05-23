@@ -69,7 +69,7 @@ class AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_params
-      params.permit(:packet, :deviceUUID, :label, :uuid, :identifier, :major, :minor, :proximity, :latitude, :longitude, :acquired)
+      params.permit(:packet, :deviceUUID, :label, :uuid, :identifier, :major, :minor, :proximity, :latitude, :longitude, :acquired, :power)
       #params[:beacontype] = params[:type]
     end
 end

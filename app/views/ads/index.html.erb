@@ -18,6 +18,7 @@
       <th>Device</th>
       <th>Beacon</th>
       <th>Name</th>
+      <th>Power</th>
       <th>Lat - Long</th>
       <th>Created</th>
       <th colspan="3"></th>
@@ -31,6 +32,7 @@
         <td><%= ad.deviceUUID %></td>
         <td><%= ad.uuid%></td>
         <td><%= ad.label%></td>
+        <td><%= ad.power%></td>
         <td><%= (ad.latitude) ? ad.latitude.to_s[0..4] : '' %>, <%=  (ad.longitude) ? ad.longitude.to_s[0..4] : ''%></td>
         <td><%= ad.created_at.strftime("%Y/%m/%d %H:%M")%></td>
         <td colspan="3"><%= link_to 'Show', ad %>
